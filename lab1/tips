@@ -1,5 +1,5 @@
 
-# Using tcpdum to display pcap file
+# Using tcpdump to display pcap file
 sudo tcpdump -ttttnnr tcp_dump.pcap >*.txt
 # Using cat & awk to select the time feature
 cat myfile | awk '{print $2}'
