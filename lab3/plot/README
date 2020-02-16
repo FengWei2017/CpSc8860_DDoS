@@ -1,0 +1,50 @@
+ECE 8930 Lab-03 Scripts Execution Instructions
+
+
+This document contains example codes for ECE 8930 assignment 3. Before proceeding the please re-run the ‘sudo bash omg_localdnf.sh’ where this script is located in your VM. Requirement is to use your Linux Fedora virtual machine for this lab. Login to your VM and run the following commands : 
+A) SFTP into NAS with the command sftp <username>@192.168.10.5 (Charleston students should use 192.168.20.5).
+    Navigate to ECE8930/ECE8930_lab3_spring_2018 on sftp and download the following files A.1) ‘bittwist-linux-2.0.tar.gz’ using get ‘bittwist-linux-2.0.tar.gz’ command.
+
+B)  Navigate to the same NAS folder and download the file ‘ECE8930_lab3_spring_2018_scripts.tgz’ using ‘get ECE8930_lab3_spring_2018_scripts.tgz’ command. Unzip the file using tar -xvzf ECE8930_lab3_spring_2018_scripts.tgz. It should have the following files : 
+         rand_arr_time.py
+         read_pcap.py
+scapy_example.py
+time_series.py
+bittwist.sh
+setup_bittwist.sh
+sample2.pcap
+README
+From this point on, refer to this point in the file README. It is replica of this file.
+
+C) Copy the file setup_bittwist.sh to the folder bittwist-linux-2.0. Execute following scripts with sudo : a) python_setup.sh
+
+
+D) Run the setup_bittwist.sh file with sudo bash setup_bittwist.sh command in your virtual machine. This should install bittwist for you. Contact your TA/Lab-guide in case of errors or issues in script installation. If you see one single warning, it is expected and compiler specific, please ignore it.
+
+     E) The example.py script will help you generate a time series plot of the pcap captured packets. In order to execute the example.py script on host machine (same script from Lab 01) , perform following steps : 
+Copy the pcap file to the NAS via sftp using put command in sftp shell. 
+In the host machine, fetch it from NAS using get command. Run python3 example.py <pcap-filename>.pcap
+ 
+ 
+
+
+There are three examples:
+1 Plot time series (example.py). This script should be present in the home folder of your host machine in pcap_utl directory from LAB 01. 
+2 Modify packets with scapy (scapy_example.py). In case this script fails, it is probably because you need to correct the interface on line 27 to the one you are using. The default hard-coded interface is ‘enp2s0’.You will know the correct interface by checking for the appropriate interface on wireshark.
+3 Replay pcap file with Bittwist (bittwist_example.sh)
+
+read_pcap.py is imported by plot_time_series_example.py to read pcap/pcapng files.
+time_series.py is imported by plot_time_series_example.py to plot time series.
+
+A pcap and/or pcapng file is required for some of the examples.
+tshark, matplotlib, and numpy are required packages for some of the example codes.
+Each example code contains multiple example functions. Check each file for detailed explanation and usage examples. Feel free to modify.
+
+
+Quick start:
+python3 example.py <filename>.pcap : To be executed on host machine
+python plot_time_series_example.py : To be executed in the linux virtual machine.
+sudo bash bittwist_example.sh : To be executed in the linux virtual machine. It needs one or more pcap files as arguments. 
+
+
+
