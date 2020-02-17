@@ -25,7 +25,7 @@ def example2_plot_time_series_from_simulated_data():
     This is an example usage of rand_arr_time.py
     rand_arr_time.py generate a random integer list
     """
-    option=1                                # There are 6 options in total, each use different method to generate random arriving times
+    option=6                                # There are 6 options in total, each use different method to generate random arriving times
     Number_of_packets=10000               # Number of packets generated
     expected_duratation=1000                # Expected length of time in seconds
     arrive_time=rand_arr_time.rand_arr_time(option,Number_of_packets,expected_duratation)  # Get packet arrive time, with option 3, 100000 packets, expected in 1000 seconds.
