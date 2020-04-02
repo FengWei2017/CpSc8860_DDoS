@@ -1,0 +1,15 @@
+ECE8860 DDoS End of Semester
+
+ 
+
+Final and last lab report are combined to be 40% of grade:
+
+Last lab report. Right a lab report for the “Elastic CDN” lab using the information in the Ilker Ozcelik dissertation available on Canvas. Use Ilker’s data. Make the lab report in the same format as the previous labs.
+
+Final. Answer the problems for Chapters 8, 9, and 10 in the book.
+
+Extra credit. Amount of credit variable. Answer the questions for Chapters 11, 12, and/or 13 in the book and provide a candid critique of the Chapters.
+
+ 
+
+Due – Last day of class. April 22. For more time, contact Dr. Brooks
